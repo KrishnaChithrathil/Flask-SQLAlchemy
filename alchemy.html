@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<title> SQL-ALCHEMY DATABASE</title>
+<link rel = "stylesheet" type = "text/css" href = "{{ url_for('static', filename = "css_for_alchemy.css")}}"
+</head>
+<body>
+<div>
+    <form method = 'POST', action = '/'>
+        <label> Enter the name: </label>
+        <input type = "text" name = "fname"><br>
+        <label> Enter location: </label>
+        <input type = "text" name = "loc"><br>
+        <input type = "submit" value = "ADD">
+    </form>
+</div>
+<div>
+    {% if name %}
+        <h1>{{ name }} from {{ location }}</h1>
+        <h2> Hey {{ name }}, Your data has been successfully added to our database.</h2>
+    {% endif %}
+</div>
+</body>
+
+</html>
